@@ -1,0 +1,256 @@
+/* link para las letras importado desde google fonts
+se ponde sin el style
+*/
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC|Oswald');
+/*es para todos los titulos este tipo de letra o fuente*/
+h1,h2,h4,h5,h6{
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px; /*dar separacione a las letras en las palabras*/
+}
+/*letras parael cuerpo de la pagina*/
+body{
+margin: 0%;
+font-family: 'Oswald', sans-serif;
+font-family: 'Noto Sans SC', sans-serif;
+}
+/*estilo para cambiar el modelo de una caja 
+que viene por defecto en los navegadores
+*/
+*{
+    box-sizing: border-box;
+}
+/*un block porque las etiquetas no son block sino line*/
+img{
+    display: block;
+    max-width: 100%;
+}
+.section__titulo {
+    text-align: center;
+    font-size: 40px;
+    color:rgb(153, 108, 30);
+  }
+  .contenedor {
+    margin: auto;
+    width: 99%;
+  }
+
+/*Estilos del header*/
+
+.header{
+    /*altura */
+    height: 60px;
+}
+/*dentro del contenedor para que se pongan uno alado de otro*/
+.header .contenedor{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*dar margen */
+.logo, .icon-menu{
+margin: 10px;
+color:#fff;
+}
+/*dar estilo al menu*/
+
+.icon-menu{
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background:rgb(153, 108, 30);
+    text-align: center;
+    line-height: 45px;
+    border-radius: 5px;
+    margin-left: auto;
+    cursor: pointer;/*icono de la mano encima del manu*/
+}
+/*para que el icono de menu desaparesca*/
+
+.nav{
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    transition: all 0.4s;
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/*diseñar menu*/
+.menu__link{
+    display: block;
+    padding: 15px;
+    background: rgb(153, 108, 30);
+    text-decoration: none;
+    color: #fff;
+
+}
+/*pasar el mause cambie dde color*/
+
+.menu__link:hover, .select {
+    background: white;
+    color: rgb(153, 108, 30);
+}
+
+/*se crea la clase que muestra el nav*/
+
+.mostrar{
+    left: 0;
+}
+
+/*dar estilo al banner
+los numeros van con menos para que tapen todo
+*/
+.banner {
+    margin-top: -60px;
+    position: relative;
+    z-index: -1000;
+    margin-bottom: 30px;
+  }
+ /*poner el textodentro de la dentro de la imagen*/
+
+ .banner .contenedor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .banner__txt {
+    display: none;
+  }
+
+/*dar estilo a la informacion*/
+
+.info__columna {
+    background: rgb(153, 108, 30); 
+    color: #fff;
+    width: 600px ;
+    height: 600px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+/*dar estilo al pie de pagina*/
+
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  /*selecciona todos las clases */
+  .footer .social [class^="icon-"] {
+    display: inline-block;
+    color: #333;
+    text-decoration: none; /*se quita la decoracion*/
+    font-size: 30px;
+    padding: 10px;
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+  }
+  /*hacer responsive*/
+  /* estaprimera parte es para indicar que apartir de aqui
+  se va hacer cambios
+  */
+
+    
+@media(min-width:480px) {
+    .logo {
+      font-size: 40px;
+    }
+    .banner__titulo {
+      font-size: 30px;
+      margin: 5px 0;
+    }
+    .banner__txt {
+      display: block;
+      font-size: 18px;
+      margin: 7px 0;
+    }
+    .info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .info__columna {
+      width: 100%;
+    }
+    .info__titulo {
+      font-size: 30px;
+      margin: 5px 0;
+    }
+    .section__titulo {
+      width: 100%;
+    }
+   
+    .footer .social [class^="icon-"] {
+      margin: 0 10px;
+    }
+  }
+  @media(min-width:768px) {  
+    .banner__titulo {
+      font-size: 50px;
+    }
+ 
+     
+  }
+  
+  @media(min-width:1024px) {  
+    .contenedor {
+      width: 10000px;
+    }
+    .nav {
+      position: static;
+      width: auto;
+    }
+    .menu {
+      display: flex;
+    }
+    .icon-menu {
+      display: none;
+    }
+    .menu__link {
+      background: none;
+      font-size: 20px;
+    }
+    .select {
+      color: #fff;
+      background: rgb(153, 108, 30);
+    }
+    .banner__titulo {
+      font-size: 60px;
+    }
+    .banner__txt {
+      font-size: 25px;
+    }
+    .info__columna {
+      padding: 30px;
+    }
+    .info__titulo {
+      font-size: 40px;
+      text-align: center;
+    }
+  }
+  
+  @media(min-width:1280px) {
+    .contenedor {
+      width: 1200px;
+    }
+    .logo {
+      font-size: 60px;
+    }
+    .banner .contenedor {
+      top: 40%;
+    }
+    
+  }
